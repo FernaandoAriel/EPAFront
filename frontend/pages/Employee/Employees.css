@@ -1,0 +1,401 @@
+/* EmployeeForm.css */
+
+/* Container principal */
+.form-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #fefce8 100%);
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Header */
+.form-header {
+  background: linear-gradient(135deg, #2563eb 0%, #eab308 100%);
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.title-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.form-subtitle {
+  color: #dbeafe;
+  margin: 8px 0 0 0;
+  font-size: 16px;
+}
+
+/* Form Content */
+.form-content {
+  padding: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.label-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  color: #000000; /* Texto negro para los campos */
+}
+
+.form-input::placeholder {
+  color: #9ca3af; /* Placeholder en gris */
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #fefefe;
+  color: #000000; /* Asegurar texto negro al enfocar */
+}
+
+.form-input:hover {
+  border-color: #d1d5db;
+}
+
+.form-input.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #000000; /* Texto negro incluso con error */
+}
+
+.form-input.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  color: #000000; /* Texto negro incluso con error y focus */
+}
+
+/* Estilos para React DatePicker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background: linear-gradient(135deg, #3b82f6 0%, #fbbf24 100%);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: white;
+  font-weight: 600;
+}
+
+.react-datepicker__day {
+  color: #374151;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.react-datepicker__day:hover {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.react-datepicker__day--selected {
+  background: linear-gradient(135deg, #3b82f6 0%, #fbbf24 100%);
+  color: white;
+  border-radius: 8px;
+}
+
+.react-datepicker__day--today {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.react-datepicker__navigation {
+  top: 15px;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white;
+}
+
+/* Password Container */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  padding-right: 48px;
+  color: #000000; /* Texto negro para contraseñas */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: #3b82f6;
+  background: #f3f4f6;
+}
+
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Error Messages */
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Submit Button */
+.submit-container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #fbbf24 100%);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 16px 8px;
+  }
+  
+  .form-content {
+    padding: 24px 16px;
+  }
+  
+  .form-header {
+    padding: 20px 16px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+  
+  .title-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .submit-button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 12px 4px;
+  }
+  
+  .form-content {
+    padding: 20px 12px;
+  }
+  
+  .form-header {
+    padding: 16px 12px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+    color: #000000;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #fbbf24);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #f59e0b);
+}
+
+/* Focus States for Accessibility */
+.form-input:focus-visible,
+.password-toggle:focus-visible,
+.submit-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animation for Error Messages */
+.error-message {
+  animation: fadeInError 0.3s ease-in-out;
+}
+
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading State (opcional para futuras mejoras) */
+.submit-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submit-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Print Styles */
+@media print {
+  .form-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .form-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .submit-button {
+    display: none;
+  }
+}

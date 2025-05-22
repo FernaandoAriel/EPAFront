@@ -14,9 +14,19 @@ import recoveryPasswordRoutes from "./src/routes/recoveryPassword.js";
 import providersRoutes from "./src/routes/providers.js";
 import brandRoutes from "./src/routes/brand.js";
 import { validateAuthToken } from "./src/middlewares/validateAuthToken.js";
+import cors from "cors"
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    // Permitir envío de cookies y credenciales
+    credentials: true
+  })
+);
+
 //s
 //Que acepte datos en json
 app.use(express.json());
